@@ -5,25 +5,20 @@ import io.micrometer.prometheus.PrometheusConfig;
 import io.micrometer.prometheus.PrometheusMeterRegistry;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.common.protocol.types.Field;
-import org.apache.kafka.common.serialization.IntegerDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.kafka.annotation.EnableKafka;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
-import org.springframework.kafka.config.KafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
-import org.springframework.kafka.listener.ConcurrentMessageListenerContainer;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @EnableKafka
 @Configurable
-public class KakfaConfiguration {
+public class KafkaConfiguration {
 
 //consumer de kafka
     public Map<String, Object> config(){
